@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente Chifa</title>
+    <link rel="stylesheet" href="style/normaliz.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style2.css">
+    <script defer src="script/scipt.js"></script>
+</head>
+<body>
+    <section id="vente-chifa">
+        <div id="fond"> </div>
+        <div class="formulaireInfo">
+            
+                <form name="form">
+                    <div class="form-item">
+                    <label for="numero-assure">N° Assuré</label>
+                    <input type="text" name="numero-assure" id="numero-assure" placeholder="Entrer le numéro de l'assuré">
+                    </div>
+                    <div class="form-item">
+                        <label for="nom-assure">Nom Assuré</label>
+                        <input type="text" name="nom-assure" id="nom-assure" placeholder="Entrer le nom de l'assuré">
+                    </div>
+                    <div class="form-item">
+                        <label for="centre-soin">Etablissement de soin</label>
+                        <input type="radio" name="centre-soin" id="centre-soin" style="cursor: pointer;">
+                        <label for="structure-hospitaliere">structures hospitaliere(CHU-EPH-EHS)</label>
+                        <input type="radio" name="centre-soin" id="centre-soin" style="cursor: pointer;">
+                        <label for="autres-structure">Autres-structure</label>
+                    </div>
+                    <div class="form-item">
+                        <label for="type-consultation" style="margin-right: 0;">Type de type de consultation</label>
+                        <select name="type-consultation" id="type-consultation">
+                            <option value=""></option>
+                            <option value="Generaliste">Généraliste</option>
+                            <option value="Specialiste">Spécialiste</option>
+                            <option value="Dentiste">Dentiste</option>
+                        </select>
+                        <label for="type-specialiste" style="margin-right: 0;">Spécialité</label>
+                        <select name="type-specialiste" id="type-specialiste">
+                            <option value="non Spécifié">Non spécifié</option>
+                            <option value="Cancérologie">Cancérologie</option>
+                            <option value="Chirurgie Cardio Vasculaire">Chirurgie Cardio Vasculaire</option>
+                            <option value="Chirurgie Générale">Chirurgie Générale</option>
+                            <option value="Dermatologie">Dermatologie</option>
+                            <option value="Diabétologie">Diabétologie</option>
+                            <option value="Endocrinologie">Endocrinologie</option>
+                            <option value="Gastro Enterologie">Gastro Enterologie</option>
+                            <option value="Gynéco Obstétrique">Gynéco Obstétrique</option>
+                            <option value="Medecine Interne">Medecine Interne</option>
+                            <option value="Neurologie">Neurologie</option>
+                            <option value="ORL">ORL</option>
+                            <option value="Ophtalmologie">Ophtalmologie</option>
+                            <option value="Pneumologie">Pneumologie</option>
+                            <option value="Pédiatrie">Pédiatrie</option>
+                            <option value="Rhumatologie">Rhumatologie</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <label for="beneficitaire">Bénéficitaire</label>
+                        <input type="text" name="beneficitaire" placeholder="Entrée le nom du bénéficitair" id="nom-beneficitaire">
+                    </div>
+                    <div class="form-item">
+                        <label for="date">Date de soin</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    
+                    <input type="submit" value="Valider" id="valider" style="
+                    width: 8%;
+                    height: 8%; 
+                    position: absolute; 
+                    left: 80%; 
+                    top: 50%;
+                    border-radius: 30px;
+                    border-style: none;
+                    font-size: 120%;
+                    font-family: var(--font-base);
+                    font-weight: 700;
+                    color: rgb(168, 224, 158);
+                    background-color: rgba(70, 70, 70, 0.8);
+                    cursor: pointer;">
+                </form>
+            
+        </div>
+
+    </section>
+
+
+    <section id="ordo">
+        <div id="fond2"></div>
+        <div class="add-mdt"> 
+        <form onsubmit="handleAddMedicament(event)">
+            
+                    <div class="form-mdt">
+                        <label for="nom-medicament">Nom Du Medicament</label>
+                        <input type="text" name="nom-medicament" id="nom-medicament" placeholder="Entrée le nom du médicament">
+                    </div>
+
+                    <div class="form-mdt">
+                        <label for="duree-medicament">Durée</label>
+                        <input type="text" name="duree-medicament" id="duree-medicament" placeholder="Entrée la durée du traitement">
+                    </div> 
+
+                    <div class="form-mdt">
+                        <label for="quantite-medicament">Quantité</label>
+                        <input type="text" name="quantite-medicament" id="quantite-medicament" placeholder="Entrée la quantité de médicament">
+                    </div> 
+
+                    <div class="form-mdt">
+                        <label for="posologie-medicament">Posologie</label>
+                        <span>
+                            <input type="text" name="posologie1">
+                        </span> 
+                        <span>
+                            <select name="forme-mdt" id="forme-mdt" name="posologie">
+                                <option value="comprimé">comprimé</option>
+                                <option value="sirop">sirop</option>
+                                <option value="ampoule">ampoule</option>
+                                <option value="injection">injection</option>
+                                <option value="sachet">sachet</option>
+                            </select>
+                        </span>
+                        <span>
+                            <input type="text" name="posologie2">
+                        </span>
+                        <span>
+                            <select name="poso-mdt" id="poso-mdt" name="posologie">
+                                <option value="par jour">par jour</option>
+                                <option value="par semaine">par semaine</option>
+                                <option value="par mois">par mois</option>
+                            </select>
+                        </span>
+                        </span>
+                    </div>  
+
+                    <div class="form-mdt">
+                        <label for="prix-medicament">Prix</label>
+                        <input type="text" name="prix-medicament" id="prix-medicament" placeholder="Entrée le prix du médicament">
+                    </div>  
+
+                    <div>
+                        <button type="submit">Ajouter</button>
+                    </div>
+        </form>
+        </div>
+
+    <div class="apercu-ordo" id="apercu-ordo">
+        <div class="information-perso">
+            <div>Numéro De L'assuré :<span id="numero-assure-apercu" style="margin-left:2%;">123456789</span></div>
+            <div>Nom De l'assuré :<span id="nom-assure-apercu" style="margin-left:2%;">JON DOE</span></div>
+            <div>Date De Soin :<span id="date-apercu" style="margin-left:2%;">11/11/2011</span></div>
+            <div>Nom Du Bénéficitaire :<span id="nom-beneficitaire-apercu" style="margin-left:2%;">JON DOE</span></div>
+       </div>
+       <span id="fermer"><button type="button">X</button></span>
+       <div class="tableau">
+           <span>Medicaments</span>
+           <span>Quantité</span>
+           <span>Prix</span>
+           <span>Sous Total</span>
+       </div>
+       <div class="medicaments" id="medicaments">
+           <!--
+           <div class="medicament">
+               <span id="nom-medicament-apercu">dolyc</span>
+               <span id="quantite-medicament-apercu">3</span>
+               <span id="prix-medicament-apercu">10</span>
+               <span id="sous-total-medicament-apercu">20</span>
+               
+           </div>
+
+        -->
+       </div>
+
+    </div>
+
+        
+    </section>
+    <div class="send">
+            
+        <button type="button" id="btnApercu"> Apreçu</button>
+        <button type="submit" id="btnSigner" onclick="signerOrdo()">Signer</button>
+    
+</div>
+    
+</body>
+</html>

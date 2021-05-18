@@ -1,0 +1,96 @@
+/****************VARIABLES***************/
+:root{
+    --font-base:'Roboto', sans-serif;
+    --font-seconde: 'Nunito', sans-serif;
+    --primary:rgb(168, 224, 158) ;
+    --secondary:rgb(139, 204, 175);
+}
+body{
+    overflow: hidden;
+}
+.acceuil{
+    display: flex;
+    justify-content: space-between;
+}
+/****************BARRE LATERAL***************/
+.barre-lateral{
+    padding-left: 10px;
+    background-color: rgba(70, 70, 70, 0.2);
+    width: 20vw;
+    height: 100vh;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-image:url(img/globe.png);
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position: bottom;
+
+}
+.barre-lateral ul{
+    list-style: none;
+}
+
+.barre-lateral a{
+    text-decoration:none;
+    line-height: 100px;
+    margin-left: -30px;
+    padding: 25px;
+    font-size: 20px;
+    font-family: var(--font-base);
+    font-style: italic;
+    font-weight: 900;
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 0px;
+    color: black;
+    background-color: var(--secondary);
+}
+
+.barre-lateral a:hover{
+    background-color:var(--primary);
+}
+.contact-us{
+    margin-top: 10px;
+}
+.contact-us img{
+    width: 40px;
+    position: absolute;
+    left: 5.5%;
+}
+.contact-us a{
+    padding: 45px 20px 0px 20px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+/****************ACCEUIL CENTRE***************/
+.centre{
+    
+    width: 80vw;
+    
+}
+.centre-haut{
+    width: 80vw;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color:rgba(70, 70, 70, 0.2) ;
+}
+.centre-haut img{
+    position: relative;
+    left: 85%;
+    width: 150px;
+    padding-bottom: 20px;
+}
+.titre{
+    position: relative;
+    left: 30%;
+    top: 20%;
+    font-family: var(--primary);
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+.titre img{
+    width: 100px;
+}
+
+
